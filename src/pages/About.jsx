@@ -46,20 +46,16 @@ function About() {
               <h2>Our Story</h2>
               <p>
                 Bringing Communities Closer, in Germany and Around the World
-
-CONVEES was born from a simple belief: technology should bring people together, not leave them feeling disconnected.
-
-In today’s fast-moving world, people live, study, and work alongside one another, yet meaningful connections are not always easy to build. Students arrive at universities without knowing where to find their community. Professionals look for people who share their interests. Organizations struggle to bring their members together beyond everyday communication.
+                CONVEES was born from a simple belief: technology should bring people together, not leave them feeling disconnected.
+                In today’s fast-moving world, people live, study, and work alongside one another, yet meaningful connections are not always easy to build. Students arrive at universities without knowing where to find their community. Professionals look for people who share their interests. Organizations struggle to bring their members together beyond everyday communication.
               </p>
               <p>
                 We created CONVEES to help change that.
-
-CONVEES is a community and event networking platform designed to connect people through shared interests, groups, activities, and real-world experiences. Whether it is a university in Germany, a workplace, a local community, or an organization anywhere in the world, our vision is to make finding your people easier.
+                CONVEES is a community and event networking platform designed to connect people through shared interests, groups, activities, and real-world experiences. Whether it is a university in Germany, a workplace, a local community, or an organization anywhere in the world, our vision is to make finding your people easier.
               </p>
               <p>
                 Starting in Germany, Building for the World
-
-Germany is an important starting point for our vision, with its diverse universities, international students, workplaces, and communities. We want to help people feel more connected, especially those who are new to a city, beginning their studies, or looking for meaningful social and professional relationships.
+                Germany is an important starting point for our vision, with its diverse universities, international students, workplaces, and communities. We want to help people feel more connected, especially those who are new to a city, beginning their studies, or looking for meaningful social and professional relationships.
               </p>
             </div>
           </div>
