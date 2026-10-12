@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-default>Communitas - Building Stronger Neighborhoods</title>
+    <title data-default>Convees - Building Stronger Neighborhoods</title>
+    <script>
+  (function() {
+    var redirect = sessionStorage.getItem('redirect');
+    sessionStorage.removeItem('redirect');
+    if (redirect) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
   </head>
   <body>
     <div id="root"></div>
