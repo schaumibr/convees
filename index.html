@@ -7,10 +7,17 @@
     <title data-default>Convees - Building Stronger Neighborhoods</title>
     <script>
   (function() {
+    // Restore redirect from 404.html
     var redirect = sessionStorage.getItem('redirect');
     sessionStorage.removeItem('redirect');
     if (redirect) {
       history.replaceState(null, null, redirect);
+    }
+
+    // Redirect hash-based auth to /auth/callback
+    var hash = window.location.hash;
+    if (hash && (hash.includes('access_token=') || hash.includes('error=') || hash.includes('type=recovery'))) {
+      window.location.replace('/convees/auth/callback' + window.location.search + hash);
     }
   })();
 </script>
