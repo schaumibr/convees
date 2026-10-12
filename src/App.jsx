@@ -10,7 +10,9 @@ import AuthCallback from './pages/AuthCallback'
 
 function App() {
   return (
-    <BrowserRouter>
+     
+    
+    <BrowserRouter basename="/convees">
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/auth/callback" element={<AuthCallback />} />
