@@ -9,10 +9,15 @@ const teamColors = [
 ]
 
 const team = [
-  { name: 'Sarah Chen', role: 'Founder & CEO', bio: 'Urban planner with 15 years of experience building neighborhood programs.', initials: 'SC' },
-  { name: 'Marcus Johnson', role: 'Head of Community', bio: 'Former community organizer passionate about grassroots engagement.', initials: 'MJ' },
-  { name: 'Priya Patel', role: 'Lead Designer', bio: 'Design advocate making technology accessible for everyone.', initials: 'PP' },
-  { name: 'David Kim', role: 'CTO', bio: 'Engineer who believes great software strengthens human connections.', initials: 'DK' },
+  {
+  name: 'Shami Snehlata',
+  role: 'Founder & CEO',
+  bio: 'Product owner and software engineer building CONVEES to connect people, empower communities, and turn shared interests into meaningful real-world connections.',
+  initials: 'SS'
+}
+  // { name: 'Marcus Johnson', role: 'Head of Community', bio: 'Former community organizer passionate about grassroots engagement.', initials: 'MJ' },
+  // { name: 'Priya Patel', role: 'Lead Designer', bio: 'Design advocate making technology accessible for everyone.', initials: 'PP' },
+  // { name: 'David Kim', role: 'CTO', bio: 'Engineer who believes great software strengthens human connections.', initials: 'DK' },
 ]
 
 function About() {
@@ -20,11 +25,9 @@ function About() {
     <>
       <section className="about-hero">
         <div className="container">
-          <h1>About Communitas</h1>
+          <h1>About Convees</h1>
           <p>
-            We are on a mission to rebuild the social fabric of neighborhoods,
-            one connection at a time. Technology should bring us closer, not
-            push us apart.
+            CONVEES a platform that bring people,organisations, groups, and activities together and people find, join and create meaningful communities.
           </p>
         </div>
       </section>
@@ -42,22 +45,21 @@ function About() {
             <div className="about-story-text animate-fade-up delay-2">
               <h2>Our Story</h2>
               <p>
-                Communitas started in 2021 when our founder, Sarah, noticed
-                something troubling: she had lived in her apartment building
-                for three years and did not know a single neighbor by name.
-                She wondered how many others felt the same isolation.
+                Bringing Communities Closer, in Germany and Around the World
+
+CONVEES was born from a simple belief: technology should bring people together, not leave them feeling disconnected.
+
+In today’s fast-moving world, people live, study, and work alongside one another, yet meaningful connections are not always easy to build. Students arrive at universities without knowing where to find their community. Professionals look for people who share their interests. Organizations struggle to bring their members together beyond everyday communication.
               </p>
               <p>
-                What began as a small neighborhood group chat grew into
-                organized events, a shared tool library, and eventually a
-                full platform. Today, Communitas serves over 12,000 members
-                across 80 neighborhoods, helping people rediscover the joy
-                of knowing their community.
+                We created CONVEES to help change that.
+
+CONVEES is a community and event networking platform designed to connect people through shared interests, groups, activities, and real-world experiences. Whether it is a university in Germany, a workplace, a local community, or an organization anywhere in the world, our vision is to make finding your people easier.
               </p>
               <p>
-                We believe that strong communities make safer, happier, and
-                more resilient neighborhoods. Our platform is designed to
-                facilitate real-world connections, not replace them.
+                Starting in Germany, Building for the World
+
+Germany is an important starting point for our vision, with its diverse universities, international students, workplaces, and communities. We want to help people feel more connected, especially those who are new to a city, beginning their studies, or looking for meaningful social and professional relationships.
               </p>
             </div>
           </div>
