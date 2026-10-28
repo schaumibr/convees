@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Layout.css'
-import conveesLogo from '../assets/image/convees.jpg'
+import conveesLogo from '../assets/image/Convees.jpg'
 
 const navLinks = [
   { to: '/about', label: 'About' },
