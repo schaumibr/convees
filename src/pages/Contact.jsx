@@ -5,7 +5,7 @@ const contactInfo = [
   {
     icon: 'primary',
     label: 'Email',
-    value: 'hello@communitas.app',
+    value: 'info@convees.com',
     svg: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></>,
   },
   {
@@ -24,11 +24,11 @@ const contactInfo = [
 
 const faqs = [
   {
-    q: 'How do I join my neighborhood on Communitas?',
+    q: 'How do I join my neighborhood on conveess?',
     a: 'Sign up with your email, verify your address, and we will automatically connect you to your neighborhood group. If your area does not have a group yet, you can start one yourself.',
   },
   {
-    q: 'Is Communitas free to use?',
+    q: 'Is conveess free to use?',
     a: 'Yes, the core platform is completely free for all members. We offer optional premium features for neighborhood organizers who want advanced event management tools.',
   },
   {
@@ -99,7 +99,7 @@ function Contact() {
         <div className="container">
           <h1>Contact Us</h1>
           <p>
-            Have a question, idea, or want to bring Communitas to your
+            Have a question, idea, or want to bring conveess to your
             neighborhood? We would love to hear from you.
           </p>
           <p>
@@ -232,7 +232,7 @@ function Contact() {
         <div className="container">
           <div className="section-heading">
             <h2>Frequently Asked Questions</h2>
-            <p>Quick answers to the most common questions about Communitas.</p>
+            <p>Quick answers to the most common questions about conveess.</p>
           </div>
           <div className="faq-list">
             {faqs.map((faq, i) => (
