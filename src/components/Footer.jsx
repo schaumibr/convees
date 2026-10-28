@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Layout.css'
+import conveesLogo from '../assets/image/Conveesblack.jpg'
 
 function Footer() {
   return (
@@ -8,9 +9,13 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="header-logo-icon">C</span>
-              <span>Communitas</span>
-            </div>
+  <img
+    src={conveesLogo}
+    alt="Convees logo"
+    className="footer-logo-image"
+  />
+  <span>Convees</span>
+</div>
             <p>
               Bringing neighborhoods together through meaningful connections,
               shared resources, and local events. Build your community, one
@@ -64,7 +69,10 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>&copy; {new Date().getFullYear()} Communitas. All rights reserved.</span>
+          
+          <span>
+  &copy; {new Date().getFullYear()} Convees. All rights reserved.
+</span>
           <span>Made with care for communities everywhere.</span>
         </div>
       </div>

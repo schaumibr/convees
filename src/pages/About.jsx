@@ -1,37 +1,60 @@
 import { Link } from 'react-router-dom'
 import './About.css'
+import founderImage from '../assets/team/founder.jpeg'
+import communityImage from '../assets/team/community.jpeg'
+import heroVideo from '../assets/videos/community-bg1.mp4' 
+
+
 
 const teamColors = [
   'linear-gradient(135deg, #3385fc, #1d66f0)',
   'linear-gradient(135deg, #10b981, #059669)',
-  'linear-gradient(135deg, #f59e0b, #d97706)',
-  'linear-gradient(135deg, #ef4444, #dc2626)',
+  // 'linear-gradient(135deg, #f59e0b, #d97706)',
+  // 'linear-gradient(135deg, #ef4444, #dc2626)',
 ]
 
 const team = [
   {
-  name: 'Shami Snehlata',
-  role: 'Founder & CEO',
-  bio: 'Product owner and software engineer building CONVEES to connect people, empower communities, and turn shared interests into meaningful real-world connections.',
-  initials: 'SS'
-}
-  // { name: 'Marcus Johnson', role: 'Head of Community', bio: 'Former community organizer passionate about grassroots engagement.', initials: 'MJ' },
-  // { name: 'Priya Patel', role: 'Lead Designer', bio: 'Design advocate making technology accessible for everyone.', initials: 'PP' },
-  // { name: 'David Kim', role: 'CTO', bio: 'Engineer who believes great software strengthens human connections.', initials: 'DK' },
+    name: 'Shami Sneha',
+    role: 'Founder & Product Owner',
+    bio: 'Building CONVEES to help people discover events, connect through shared interests, and build communities.',
+    image: founderImage,
+  },
+  {
+    name: 'Vysakh Jayaprakash',
+    role: 'Community & Operations',
+    bio: 'Supporting meaningful connections and creating better community experiences.',
+    image: communityImage,
+  },
 ]
 
+   
 function About() {
   return (
     <>
-      <section className="about-hero">
-        <div className="container">
-          <h1>About Convees</h1>
+    <section className="about-hero">
+        <div className="video-overlay"></div>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="hero-video"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+
+        <div className="container hero-content">
+          <h1>About Communitas</h1>
           <p>
-            CONVEES a platform that bring people,organisations, groups, and activities together and people find, join and create meaningful communities.
+            We are on a mission to rebuild the social fabric of neighborhoods,
+            one connection at a time. Technology should bring us closer, not
+            push us apart.
           </p>
         </div>
       </section>
 
+      
       <section className="section">
         <div className="container">
           <div className="about-story">
@@ -45,17 +68,22 @@ function About() {
             <div className="about-story-text animate-fade-up delay-2">
               <h2>Our Story</h2>
               <p>
-                Bringing Communities Closer, in Germany and Around the World
-                CONVEES was born from a simple belief: technology should bring people together, not leave them feeling disconnected.
-                In today’s fast-moving world, people live, study, and work alongside one another, yet meaningful connections are not always easy to build. Students arrive at universities without knowing where to find their community. Professionals look for people who share their interests. Organizations struggle to bring their members together beyond everyday communication.
+                Communitas started in 2021 when our founder, Sarah, noticed
+                something troubling: she had lived in her apartment building
+                for three years and did not know a single neighbor by name.
+                She wondered how many others felt the same isolation.
               </p>
               <p>
-                We created CONVEES to help change that.
-                CONVEES is a community and event networking platform designed to connect people through shared interests, groups, activities, and real-world experiences. Whether it is a university in Germany, a workplace, a local community, or an organization anywhere in the world, our vision is to make finding your people easier.
+                What began as a small neighborhood group chat grew into
+                organized events, a shared tool library, and eventually a
+                full platform. Today, Communitas serves over 12,000 members
+                across 80 neighborhoods, helping people rediscover the joy
+                of knowing their community.
               </p>
               <p>
-                Starting in Germany, Building for the World
-                Germany is an important starting point for our vision, with its diverse universities, international students, workplaces, and communities. We want to help people feel more connected, especially those who are new to a city, beginning their studies, or looking for meaningful social and professional relationships.
+                We believe that strong communities make safer, happier, and
+                more resilient neighborhoods. Our platform is designed to
+                facilitate real-world connections, not replace them.
               </p>
             </div>
           </div>
@@ -66,12 +94,12 @@ function About() {
         <div className="container">
           <div className="section-heading">
             <h2>Our Core Values</h2>
-            <p>The principles that guide everything we build and every decision we make.</p>
+            <p>At CONVEES, we believe meaningful connections build stronger communities. We make it easier for people to discover events, share interests, and turn everyday interactions into lasting relationships. Our goal is to create a space where everyone feels connected, included, and inspired to participate.</p>
           </div>
-          <div className="grid grid-3">
+          {/* <div className="grid grid-3">
             <div className="card value-card animate-fade-up">
               <div className="value-icon primary">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="180" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="9" cy="7" r="4" />
                   <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
                   <circle cx="17" cy="7" r="4" />
@@ -79,7 +107,7 @@ function About() {
                 </svg>
               </div>
               <h3>Inclusivity</h3>
-              <p>Everyone belongs. We design for accessibility across ages, languages, and abilities so no neighbor is left behind.</p>
+              <p>At CONVEES, we believe meaningful connections build stronger communities. We make it easier for people to discover events, share interests, and turn everyday interactions into lasting relationships. Our goal is to create a space where everyone feels connected, included, and inspired to participate..</p>
             </div>
             <div className="card value-card animate-fade-up delay-2">
               <div className="value-icon secondary">
@@ -102,11 +130,11 @@ function About() {
               <h3>Connection</h3>
               <p>Every feature we build has one goal: creating meaningful real-world interactions between people who live near each other.</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <section className="section">
+      {/* <section className="section">
         <div className="container">
           <div className="section-heading">
             <h2>Meet the Team</h2>
@@ -125,7 +153,73 @@ function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+  <section className="about-stats">
+        <div className="container">
+          <div className="about-stats-grid">
+            <div className="about-stat">
+           
+              <div className="about-stat-label">Active Members</div>
+            </div>
+            <div className="about-stat">
+          
+              <div className="about-stat-label">Neighborhoods</div>
+            </div>
+            <div className="about-stat">
+        
+              <div className="about-stat-label">Events Organized</div>
+            </div>
+            <div className="about-stat">
+        
+              <div className="about-stat-label">Resources Shared</div>
+            </div>
+            <div className="about-stat">
+          
+              <div className="about-stat-label">Neighborhoods</div>
+            </div>
+            <div className="about-stat">
+          
+              <div className="about-stat-label">Neighborhoods</div>
+            </div>
+            <div className="about-stat">
+          
+              <div className="about-stat-label">Neighborhoods</div>
+            </div>
+          </div>
+        </div>
+      </section>s
+      
+<section className="section">
+  <div className="container">
+    <div className="section-heading">
+      <h2>We are team</h2>
+      <p>
+        The people behind CONVEES, dedicated to building stronger communities.
+      </p>
+    </div>
+
+    <div className="grid grid-4">
+      {team.map((member, i) => (
+        <div
+          key={member.name}
+          className={`card team-card animate-fade-up delay-${i + 1}`}
+        >
+          <img
+            src={member.image}
+            alt={member.name}
+            className="team-photo"
+            loading="lazy"
+          />
+
+          <h4>{member.name}</h4>
+          <div className="team-role">{member.role}</div>
+          <p className="team-bio">{member.bio}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       <section className="about-stats">
         <div className="container">

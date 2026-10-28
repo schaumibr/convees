@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Layout.css'
+import conveesLogo from '../assets/image/convees.jpg'
 
 const navLinks = [
   { to: '/about', label: 'About' },
@@ -27,10 +28,13 @@ function Header() {
   return (
     <header className={`app-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-inner">
-        <Link to="/" className="header-logo">
-          <span className="header-logo-icon">C</span>
-          <span>Communitas</span>
-        </Link>
+    <Link to="/" className="header-logo">
+  <img
+    src={conveesLogo}
+    alt="Convees logo"
+    className="header-logo-image"
+  />
+</Link>
 
         <nav className="header-nav">
           {navLinks.map((link) => (
@@ -45,17 +49,17 @@ function Header() {
         </nav>
 
         <div className="header-actions">
-          <Link to="/reset-password" className="btn btn-ghost" style={{ fontSize: 'var(--text-sm)' }}>
-            Sign In
-          </Link>
-          <Link to="/about" className="btn btn-primary" style={{ fontSize: 'var(--text-sm)' }}>
+            {/* <Link to="/reset-password" className="btn btn-ghost" style={{ fontSize: 'var(--text-sm)' }}>
+              Sign In
+            </Link> */}
+          {/* <Link to="/about" className="btn btn-primary" style={{ fontSize: 'var(--text-sm)' }}>
             Get Started
-          </Link>
+          </Link> */}
           <button
             className="header-menu-btn"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
-          >
+            >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               {menuOpen ? (
                 <>

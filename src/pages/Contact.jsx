@@ -97,15 +97,18 @@ function Contact() {
     <>
       <section className="contact-hero">
         <div className="container">
-          <h1>Get in Touch</h1>
+          <h1>Contact Us</h1>
           <p>
             Have a question, idea, or want to bring Communitas to your
             neighborhood? We would love to hear from you.
           </p>
+          <p>
+            support@convees.com
+          </p>
         </div>
       </section>
 
-      <section className="section">
+      {/* <section className="section">
         <div className="container">
           <div className="contact-layout">
             <div className="contact-info">
@@ -223,7 +226,7 @@ function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section faq-section">
         <div className="container">

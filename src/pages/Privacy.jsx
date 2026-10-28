@@ -1,220 +1,302 @@
-import './Privacy.css'
+import React, { useState } from 'react';
+import './Privacy.css'; // Aapki purani CSS file
 
-const sections = [
-  {
-    id: 'introduction',
-    title: '1. Introduction',
-    body: (
-      <>
-        <p>
-          Welcome to Communitas. We are committed to protecting your privacy and
-          ensuring you understand how we collect, use, and safeguard your
-          information. This Privacy Policy explains our practices regarding
-          personal data collected through our platform.
-        </p>
-        <p>
-          By using Communitas, you agree to the collection and use of information
-          in accordance with this policy. We will never sell your personal data
-          to third parties.
-        </p>
-      </>
-    ),
-  },
-  {
-    id: 'data-collection',
-    title: '2. Information We Collect',
-    body: (
-      <>
-        <p>We collect the following types of information:</p>
-        <ul>
-          <li><strong>Account information:</strong> Name, email address, and password when you create an account.</li>
-          <li><strong>Profile information:</strong> Neighborhood, interests, and any details you choose to add to your public profile.</li>
-          <li><strong>Address verification:</strong> We verify your address to connect you to the correct neighborhood group. We store only the postal code and neighborhood association, not your full address.</li>
-          <li><strong>Usage data:</strong> Information about how you interact with the platform, including events attended, posts made, and resources shared.</li>
-          <li><strong>Device information:</strong> IP address, browser type, and operating system for security and analytics purposes.</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: 'data-usage',
-    title: '3. How We Use Your Information',
-    body: (
-      <>
-        <p>We use your information to:</p>
-        <ul>
-          <li>Connect you with your neighborhood and nearby members</li>
-          <li>Facilitate event organization, resource sharing, and forum discussions</li>
-          <li>Send you notifications about relevant community activity</li>
-          <li>Improve our platform features and user experience</li>
-          <li>Ensure platform security and prevent abuse</li>
-          <li>Provide customer support and respond to your inquiries</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: 'data-sharing',
-    title: '4. Information Sharing',
-    body: (
-      <>
-        <p>
-          We do not sell, trade, or rent your personal information to others.
-          We may share limited data in these situations:
-        </p>
-        <ul>
-          <li><strong>With other members:</strong> Your profile name and neighborhood are visible to verified members in your community.</li>
-          <li><strong>Service providers:</strong> Third-party services that help us operate the platform (e.g., email delivery, analytics), under strict confidentiality agreements.</li>
-          <li><strong>Legal compliance:</strong> If required by law or to protect the rights, safety, or property of our users.</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: 'data-security',
-    title: '5. Data Security',
-    body: (
-      <>
-        <p>
-          We implement industry-standard security measures to protect your
-          personal information, including encrypted data transmission (TLS),
-          hashed passwords, and secure data storage. Access to personal data
-          is restricted to authorized personnel only.
-        </p>
-        <p>
-          While we strive to protect your information, no method of transmission
-          over the Internet is completely secure. We continuously improve our
-          security practices to safeguard your data.
-        </p>
-      </>
-    ),
-  },
-  {
-    id: 'cookies',
-    title: '6. Cookies and Tracking',
-    body: (
-      <>
-        <p>
-          We use cookies and similar technologies to remember your preferences,
-          keep you signed in, and understand how you use our platform. You can
-          control cookies through your browser settings, but disabling them
-          may affect some features.
-        </p>
-        <ul>
-          <li><strong>Essential cookies:</strong> Required for login and core functionality.</li>
-          <li><strong>Preference cookies:</strong> Remember your settings and choices.</li>
-          <li><strong>Analytics cookies:</strong> Help us understand usage patterns to improve the platform.</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: 'your-rights',
-    title: '7. Your Privacy Rights',
-    body: (
-      <>
-        <p>You have the following rights regarding your personal data:</p>
-        <ul>
-          <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
-          <li><strong>Correction:</strong> Update or correct inaccurate information.</li>
-          <li><strong>Deletion:</strong> Request that we delete your account and associated data.</li>
-          <li><strong>Opt-out:</strong> Unsubscribe from non-essential communications at any time.</li>
-          <li><strong>Data portability:</strong> Receive your data in a portable format.</li>
-        </ul>
-        <p>To exercise any of these rights, contact us at privacy@communitas.app.</p>
-      </>
-    ),
-  },
-  {
-    id: 'children',
-    title: '8. Children\'s Privacy',
-    body: (
-      <>
-        <p>
-          Communitas is designed for adults and is not intended for children
-          under the age of 16. We do not knowingly collect personal information
-          from anyone under 16. If you believe a minor has registered on our
-          platform, please contact us so we can remove their account.
-        </p>
-      </>
-    ),
-  },
-  {
-    id: 'changes',
-    title: '9. Changes to This Policy',
-    body: (
-      <>
-        <p>
-          We may update this Privacy Policy from time to time. When we do, we
-          will revise the date at the bottom of this page and notify you of
-          significant changes via email or an in-app notification. We encourage
-          you to review this policy periodically.
-        </p>
-      </>
-    ),
-  },
-  {
-    id: 'contact',
-    title: '10. Contact Us',
-    body: (
-      <>
-        <p>
-          If you have any questions about this Privacy Policy or our data
-          practices, we are here to help.
-        </p>
-        <div className="privacy-contact">
-          <h4>Privacy Team</h4>
-          <p>Email: privacy@communitas.app</p>
-          <p>Phone: (555) 123-4567</p>
-          <p>Mail: 123 Community Lane, Portland, OR 97201</p>
-        </div>
-      </>
-    ),
-  },
-]
+// ================= DATA =================
 
-function Privacy() {
+const privacySections = [
+  {
+    id: 'intro',
+    title: 'Information We Collect',
+    body: (
+      <>
+        <p>
+          CONVEES respects your privacy and is committed to protecting the personal information you provide when using our website, mobile application, and related services. This Privacy Policy explains what information we collect, why we collect it, how we use and protect it, and the choices available to you.
+        </p>
+        <p>
+          When you create an account or use CONVEES, we may collect information such as your name, email address, phone number, profile information, profile photograph, interests, community memberships, event registrations, RSVPs, reviews, ratings, comments, photographs, videos, and other information that you voluntarily provide.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 'usage',
+    title: 'How We Use Your Information',
+    body: (
+      <>
+        <p>CONVEES uses the information we collect to create and manage your account, provide access to communities and events, process registrations and payments, communicate with you about your account and activities, provide relevant notifications, improve the functionality and security of the platform, prevent fraud and misuse, provide customer support, and develop and improve CONVEES.</p>
+      </>
+    ),
+  },
+  {
+    id: 'sharing',
+    title: 'Sharing of Information',
+    body: (
+      <>
+        <p>CONVEES may share information with third-party service providers where reasonably necessary to operate the platform. These providers may include hosting and database providers, authentication services, payment processors, email or communication providers, analytics and security services.</p>
+        <p>CONVEES does not intend to sell your personal information as a standalone commercial product.</p>
+      </>
+    ),
+  },
+  {
+    id: 'payments',
+    title: 'Payments & Security',
+    body: (
+      <>
+        <p>Payments made through CONVEES may be processed by third-party payment service providers. CONVEES may receive transaction-related information such as the transaction reference, payment status, amount, order information, and other information necessary to confirm and manage the transaction. Payment credentials are generally processed by the applicable payment provider rather than stored directly by CONVEES.</p>
+        <p>We take reasonable technical and organizational measures designed to protect personal information against unauthorized access, loss, misuse, alteration, or disclosure.</p>
+      </>
+    ),
+  },
+  {
+    id: 'contact-privacy',
+    title: 'Contact Us',
+    body: (
+      <>
+        <p>If you have questions, concerns, or requests relating to this Privacy Policy or the way CONVEES handles your personal information, you may contact us at <strong>support@convees.com</strong>.</p>
+      </>
+    ),
+  }
+];
+
+const termsSections = [
+  {
+    id: 'about-terms',
+    title: 'About CONVEES',
+    body: (
+      <>
+        <p>CONVEES is a platform that helps people discover events, join communities, create and manage events, communicate with other community members, and participate in activities. CONVEES primarily provides the technology and platform through which these activities can take place.</p>
+        <p>Unless expressly stated otherwise, CONVEES is not the organizer, host, owner, or operator of events created by third-party organizers.</p>
+      </>
+    ),
+  },
+  {
+    id: 'eligibility',
+    title: 'Eligibility & Accounts',
+    body: (
+      <>
+        <p>You must provide accurate and current information when creating and using a CONVEES account. You are responsible for maintaining the accuracy of your account information and for keeping your login credentials secure.</p>
+        <p>You must be legally capable of entering into a binding agreement under applicable law to use CONVEES. Certain events or services may have additional age requirements.</p>
+      </>
+    ),
+  },
+  {
+    id: 'responsibilities',
+    title: 'Communities & Events',
+    body: (
+      <>
+        <p>CONVEES allows users and authorized organizers to create, join, and participate in communities or groups. Each community may have its own rules, membership requirements, and participation conditions.</p>
+        <p>The organizer is responsible for ensuring that the information provided for an event is accurate and lawful and for conducting the event as described. CONVEES does not guarantee that an event will take place exactly as described.</p>
+      </>
+    ),
+  },
+  {
+    id: 'payments-terms',
+    title: 'Tickets, Payments, and Fees',
+    body: (
+      <>
+        <p>Where CONVEES provides ticketing or payment functionality, payments may be processed through third-party payment service providers. The price displayed at the time of purchase, together with any applicable taxes, platform fees, payment processing fees, or other charges, will be presented to you before completion of the transaction.</p>
+        <p>CONVEES may not be responsible for payment failures caused by a bank, payment gateway, card issuer, UPI provider, or other third-party payment service.</p>
+      </>
+    ),
+  },
+  {
+    id: 'refunds',
+    title: 'Refunds and Cancellations',
+    body: (
+      <>
+        <p>Refunds and cancellations may depend on the terms specified for the relevant event and the applicable payment provider. Unless otherwise stated, the event organizer is responsible for determining and fulfilling refunds relating to an event that the organizer has cancelled, materially changed, or failed to provide.</p>
+      </>
+    ),
+  }
+];
+
+const legalSections = [
+  {
+    id: 'operator',
+    title: 'Operator Information',
+    body: (
+      <>
+        <p><strong>Legal/Business Name:</strong> 80smonk Tech Solution</p>
+        <p><strong>Brand Name:</strong> CONVEES</p>
+        <p><strong>Business Address:</strong> Sector 137, Expressway, Noida (U.P.), Country: India</p>
+        <p><strong>Email:</strong> info@convees.com</p>
+        <p><strong>Website:</strong> https://convees.com</p>
+      </>
+    ),
+  },
+  {
+    id: 'nature',
+    title: 'Nature of the Platform',
+    body: (
+      <>
+        <p>CONVEES is a technology platform that enables users to discover and participate in communities and events and, where available, create and manage communities and events. The platform may also provide functionality for event registration, ticketing, payments, communication, reviews, ratings, and other community-related activities.</p>
+      </>
+    ),
+  },
+  {
+    id: 'ip',
+    title: 'Intellectual Property',
+    body: (
+      <>
+        <p>The CONVEES name, logo, branding, website, application interface, software, and other materials owned or licensed by CONVEES are protected by applicable intellectual property laws. No part of the CONVEES Platform may be reproduced, copied, modified, distributed, or commercially used without appropriate authorization.</p>
+      </>
+    ),
+  }
+];
+
+const aboutSections = [
+  {
+    id: 'vision',
+    title: 'Bringing People Together',
+    body: (
+      <>
+        <p>CONVEES is a community and events platform created to make it easier for people to discover, connect, participate, and build meaningful communities. Today, people often discover events through scattered WhatsApp groups, social media posts, university portals, and different event platforms. CONVEES is built to bring these experiences together in one place.</p>
+      </>
+    ),
+  },
+  {
+    id: 'what-we-do',
+    title: 'What CONVEES Does',
+    body: (
+      <>
+        <p>CONVEES helps users discover communities and events that match their interests and gives organizers and communities tools to create and manage activities. CONVEES is designed to support different types of communities, including university communities, professional groups, clubs, organizations, local communities, and interest-based groups.</p>
+      </>
+    ),
+  },
+  {
+    id: 'future',
+    title: 'Our Future',
+    body: (
+      <>
+        <p>CONVEES is starting with communities and events and aims to grow into a broader platform for discovering activities, connecting people, and supporting community-led experiences. Our goal is not simply to help people find an event. Our goal is to help people find their community.</p>
+      </>
+    ),
+  }
+];
+
+const faqs = [
+  { q: "What is CONVEES?", a: "CONVEES is a community and events platform that helps people discover communities, find events, connect with others, and participate in activities that match their interests." },
+  { q: "Is CONVEES free to use?", a: "Many CONVEES features may be available free of charge. Some events, tickets, organizer services, or premium features may involve charges." },
+  { q: "How do I create a CONVEES account?", a: "You can create an account using the registration options available in the CONVEES application or website. You may be required to verify your email address or phone number." },
+  { q: "How do I register for an event?", a: "Open the event you are interested in and follow the registration or RSVP instructions provided on the event page. Some events may be free, while others may require payment." },
+  { q: "Is my card or banking information stored by CONVEES?", a: "Payment information may be processed by third-party payment providers. Sensitive payment credentials may be handled directly by the payment provider rather than stored by CONVEES." },
+  { q: "Can I report an event or user?", a: "Yes. Where reporting functionality is available, you can report content, events, or users that you believe violate CONVEES rules or create a safety concern." }
+];
+
+// ================= COMPONENT =================
+
+export default function LegalPage() {
+  const [activeTab, setActiveTab] = useState('privacy');
+
+  // Data mapping based on active tab
+  const getSections = () => {
+    switch (activeTab) {
+      case 'privacy': return privacySections;
+      case 'terms': return termsSections;
+      case 'legal': return legalSections;
+      case 'about': return aboutSections;
+      default: return privacySections;
+    }
+  };
+
   return (
-    <>
-      <section className="privacy-hero">
+    <div className="legal-page-wrapper" style={{ minHeight: '100vh', background: 'var(--neutral-50, #f9f9f9)', paddingBottom: '50px' }}>
+      
+      {/* Hero Section */}
+      <section className="privacy-hero" style={{ background: 'var(--primary, #6833c4)', color: 'white', padding: '60px 20px', textAlign: 'center' }}>
         <div className="container">
-          <h1>Privacy Policy</h1>
-          <p>Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Legal & Policies</h1>
+          <p style={{ opacity: 0.8 }}>Last updated: October 15, 2026</p>
         </div>
       </section>
 
-      <div className="privacy-layout">
-        <nav className="privacy-toc">
-          <h4>Contents</h4>
-          <ul>
-            {sections.map((s) => (
-              <li key={s.id}>
-                <a href={`#${s.id}`}>{s.title.replace(/^\d+\.\s/, '')}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="privacy-content">
-          {sections.map((s, i) => (
-            <section key={s.id} id={s.id} className={`privacy-card privacy-section animate-fade-up delay-${Math.min(i + 1, 6)}`}>
-              <h3>{s.title}</h3>
-              {s.body}
-            </section>
-          ))}
+      {/* Tabs Navigation */}
+      <div className="container" style={{ marginTop: '-30px', position: 'relative', zIndex: 10 }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap', background: 'white', padding: '10px', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', maxWidth: '800px', margin: '0 auto' }}>
+          {['Privacy', 'Terms', 'Legal Notice', 'About', 'FAQs'].map((tab) => {
+            const tabId = tab.toLowerCase().replace(' ', '-');
+            const isActive = activeTab === tabId || (tab === 'Legal Notice' && activeTab === 'legal');
+            
+            return (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tabId === 'legal-notice' ? 'legal' : tabId)}
+                style={{
+                  padding: '10px 20px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontWeight: isActive ? 'bold' : 'normal',
+                  background: isActive ? 'var(--primary, #6833c4)' : 'transparent',
+                  color: isActive ? 'white' : '#6833c4',
+                  transition: 'all 0.3s'
+                }}
+              >
+                {tab}
+              </button>
+            );
+          })}
         </div>
       </div>
 
-      <section className="section-sm" style={{ background: 'var(--neutral-100)' }}>
-        <div className="container text-center">
-          <p className="text-muted" style={{ fontSize: 'var(--text-sm)' }}>
-            This privacy policy is part of our commitment to transparency.
-            If you have concerns about how your data is handled, please reach out.
-          </p>
-        </div>
-      </section>
-    </>
-  )
-}
+      {/* Main Content Area */}
+      <div className="privacy-layout container" style={{ marginTop: '40px', display: 'flex', gap: '30px', flexWrap: 'wrap' }}>
+        
+        {/* Sidebar Navigation (Table of Contents) */}
+        {activeTab !== 'faqs' && (
+          <nav className="privacy-toc" style={{ flex: '1 1 250px', maxWidth: '300px' }}>
+            <div style={{ position: 'sticky', top: '20px', background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+              <h4 style={{ marginBottom: '15px', color: '#111827' }}>Contents</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                {getSections().map((s) => (
+                  <li key={s.id} style={{ marginBottom: '10px' }}>
+                    <a href={`#${s.id}`} style={{ textDecoration: 'none', color: '#4F46E5', fontSize: '14px', display: 'block' }}>
+                      {s.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+        )}
 
-export default Privacy
+        {/* Content Body */}
+        <div className="privacy-content" style={{ flex: '1 1 500px' }}>
+          
+          {/* Render Sections for Privacy, Terms, Legal, About */}
+          {activeTab !== 'faqs' && getSections().map((section) => (
+            <section 
+              key={section.id} 
+              id={section.id} 
+              className="privacy-card"
+              style={{ background: 'white', padding: '30px', borderRadius: '12px', marginBottom: '20px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}
+            >
+              <h3 style={{ marginBottom: '15px', color: '#111827', fontSize: '20px' }}>{section.title}</h3>
+              <div style={{ color: '#4b5563', lineHeight: '1.6' }}>{section.body}</div>
+            </section>
+          ))}
+
+          {/* Render FAQs Accordion */}
+          {activeTab === 'faqs' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+              {faqs.map((faq, index) => (
+                <details 
+                  key={index} 
+                  style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 4px rgba(0,0,0,0.05)', cursor: 'pointer' }}
+                >
+                  <summary style={{ fontWeight: 'bold', color: '#111827', fontSize: '16px' }}>
+                    {faq.q}
+                  </summary>
+                  <p style={{ marginTop: '15px', color: '#4b5563', lineHeight: '1.6' }}>
+                    {faq.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          )}
+
+        </div>
+      </div>
+    </div>
+  );
+}
