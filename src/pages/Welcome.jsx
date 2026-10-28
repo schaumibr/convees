@@ -16,7 +16,7 @@ function Welcome() {
           </span>
 
           <h1 className="welcome-title animate-fade-up delay-2">
-            Welcome to <span className="text-gradient">Communitas</span>
+            Welcome to <span className="text-gradient">conveess</span>
           </h1>
 
           <p className="welcome-subtitle animate-fade-up delay-3">
@@ -26,7 +26,7 @@ function Welcome() {
 
           <div className="welcome-cta animate-fade-up delay-4">
             <Link to="/about" className="btn btn-primary btn-lg">
-              Explore Communitas
+              Explore conveess
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -61,7 +61,7 @@ function Welcome() {
         <Link to="/contact">Contact</Link> &middot;
         <Link to="/reset-password">Reset Password</Link>
         <div style={{ marginTop: 'var(--space-2)' }}>
-          &copy; {new Date().getFullYear()} Communitas. All rights reserved.
+          &copy; {new Date().getFullYear()} conveess. All rights reserved.
         </div>
       </footer>
     </div>
