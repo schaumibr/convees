@@ -115,7 +115,7 @@ function Features() {
         <div className="container features-hero-grid">
           <div className="features-hero-text">
             <span className="features-pill">Events &amp; communities, verified</span>
-            <h1>Explore same interests people around you.</h1>
+            <h1>Explore like-minded people around you.</h1>
             
             <p>
               Convees brings public events, organization meetups and interest
