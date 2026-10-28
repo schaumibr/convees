@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Layout.css'
-import conveesImg from '../assets/image/convees.jpg'
+import conveesLogo from '../assets/image/convees.jpg'
 
 const navLinks = [
   { to: '/about', label: 'About' },
@@ -30,7 +30,7 @@ function Header() {
       <div className="header-inner">
     <Link to="/" className="header-logo">
   <img
-    src={conveesImg}
+    src={conveesLogo}
     alt="Convees logo"
     className="header-logo-image"
   />
