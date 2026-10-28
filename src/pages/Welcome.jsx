@@ -37,7 +37,7 @@ function Welcome() {
             </Link>
           </div>
 
-          <div className="welcome-stats animate-scale-in delay-5">
+          {/* <div className="welcome-stats animate-scale-in delay-5">
             <div className="welcome-stat">
               <div className="welcome-stat-num">12K+</div>
               <div className="welcome-stat-label">Active Members</div>
@@ -52,7 +52,7 @@ function Welcome() {
               <div className="welcome-stat-num">95%</div>
               <div className="welcome-stat-label">Satisfaction Rate</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </main>
 
