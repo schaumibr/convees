@@ -116,6 +116,7 @@ function Features() {
           <div className="features-hero-text">
             <span className="features-pill">Events &amp; communities, verified</span>
             <h1>Explore same interests people around you.</h1>
+            
             <p>
               Convees brings public events, organization meetups and interest
               groups into one app, so you always know what is happening near you.

@@ -118,7 +118,7 @@ const legalSections = [
       <>
         <p><strong>Legal/Business Name:</strong> 80smonk Tech Solution</p>
         <p><strong>Brand Name:</strong> CONVEES</p>
-        <p><strong>Business Address:</strong> Sector 137, Expressway, Noida (U.P.), Country: India</p>
+        <p><strong>Business Address:</strong> Pournami, kaitheripoyil, P.O Pathiriyad, Kannur , Kerala 670741, India</p>
         <p><strong>Email:</strong> info@convees.com</p>
         <p><strong>Website:</strong> https://convees.com</p>
       </>

@@ -7,6 +7,11 @@ import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import ResetPassword from './pages/ResetPassword'
 import AuthCallback from './pages/AuthCallback'
+// Add this at the top with other imports
+import Career from './pages/Career'; 
+
+// Inside your <Routes> block, add this:
+
 
 function App() {
   return (
@@ -22,6 +27,7 @@ function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/career" element={<Career />} />
            
         </Route>
       </Routes>

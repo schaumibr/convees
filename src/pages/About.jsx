@@ -45,11 +45,9 @@ function About() {
         </video>
 
         <div className="container hero-content">
-          <h1>About Communitas</h1>
+          <h1>About Convees</h1>
           <p>
-            We are on a mission to rebuild the social fabric of neighborhoods,
-            one connection at a time. Technology should bring us closer, not
-            push us apart.
+            CONVEES brings people together to discover events, join communities, and meet people who share their interests — all in one place.
           </p>
         </div>
       </section>
@@ -68,17 +66,18 @@ function About() {
             <div className="about-story-text animate-fade-up delay-2">
               <h2>Our Story</h2>
               <p>
-                Communitas started in 2021 when our founder, Sarah, noticed
-                something troubling: she had lived in her apartment building
-                for three years and did not know a single neighbor by name.
-                She wondered how many others felt the same isolation.
+                
+
+CONVEES was born from a simple idea: bringing people closer should be easier.
+
+We’re building a platform not only for universities, workplaces, and organisations, but also for the public.Anyone who wants to discover events, join communities, share interests, and connect with like-minded people.
+
+Whether you’re part of an organisation or simply looking to find your people, CONVEES brings communities and opportunities together in one place.
+
+
               </p>
               <p>
-                What began as a small neighborhood group chat grew into
-                organized events, a shared tool library, and eventually a
-                full platform. Today, Communitas serves over 12,000 members
-                across 80 neighborhoods, helping people rediscover the joy
-                of knowing their community.
+            we Bringing Communities Closer
               </p>
               <p>
                 We believe that strong communities make safer, happier, and
@@ -173,18 +172,9 @@ function About() {
         
               <div className="about-stat-label">Resources Shared</div>
             </div>
-            <div className="about-stat">
+  
           
-              <div className="about-stat-label">Neighborhoods</div>
-            </div>
-            <div className="about-stat">
-          
-              <div className="about-stat-label">Neighborhoods</div>
-            </div>
-            <div className="about-stat">
-          
-              <div className="about-stat-label">Neighborhoods</div>
-            </div>
+              
           </div>
         </div>
       </section>s
@@ -221,11 +211,11 @@ function About() {
 </section>
 
 
-      <section className="about-stats">
+      {/* <section className="about-stats">
         <div className="container">
           <div className="about-stats-grid">
             <div className="about-stat">
-              <div className="about-stat-num">12K+</div>
+          
               <div className="about-stat-label">Active Members</div>
             </div>
             <div className="about-stat">
@@ -242,7 +232,7 @@ function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section" style={{ background: 'var(--neutral-100)' }}>
         <div className="container text-center">

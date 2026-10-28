@@ -54,14 +54,15 @@ function Footer() {
             <ul>
               <li><Link to="/contact">Help Center</Link></li>
               <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/reset-password">Reset Password</Link></li>
+              {/* <li><Link to="/reset-password">Reset Password</Link></li> */}
+              
             </ul>
           </div>
 
-          <div className="footer-col">
+          <div className="footer-col">  
             <h4>Company</h4>
             <ul>
-              <li><a href="#">Careers</a></li>
+              <li><Link to="/career">Careers</Link></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Press Kit</a></li>
             </ul>
