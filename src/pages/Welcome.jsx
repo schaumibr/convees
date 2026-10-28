@@ -16,7 +16,7 @@ function Welcome() {
           </span>
 
           <h1 className="welcome-title animate-fade-up delay-2">
-            Welcome to <span className="text-gradient">conveess</span>
+            Welcome to <span className="text-gradient">convees</span>
           </h1>
 
           <p className="welcome-subtitle animate-fade-up delay-3">
