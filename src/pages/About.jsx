@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './About.css'
 import founderImage from '../assets/team/founder.jpeg'
 import communityImage from '../assets/team/community.jpeg'
+import mediaImage from '../assets/team/markus.jpeg'
 import heroVideo from '../assets/videos/homepgvideo.mp4' 
 
 
@@ -20,12 +21,20 @@ const team = [
     bio: 'Building CONVEES to help people discover events, connect through shared interests, and build communities.',
     image: founderImage,
   },
+   {
+    name: 'Markus Blümel',
+    role: 'Media consultant',
+    bio: 'Helping to create engaging content and media strategies for CONVEES.',
+    image: mediaImage,
+  },
   {
     name: 'Vysakh Jayaprakash',
     role: 'Community & Operations',
     bio: 'Supporting meaningful connections and creating better community experiences.',
     image: communityImage,
   },
+   
+
 ]
 
    
