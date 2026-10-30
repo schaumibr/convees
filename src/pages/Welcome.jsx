@@ -26,7 +26,7 @@ function Welcome() {
 
           <div className="welcome-cta animate-fade-up delay-4">
             <Link to="/about" className="btn btn-primary btn-lg">
-              Explore conveess
+              Explore convees
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -61,7 +61,7 @@ function Welcome() {
         <Link to="/contact">Contact</Link> &middot;
         <Link to="/reset-password">Reset Password</Link>
         <div style={{ marginTop: 'var(--space-2)' }}>
-          &copy; {new Date().getFullYear()} conveess. All rights reserved.
+          &copy; {new Date().getFullYear()} convees. All rights reserved.
         </div>
       </footer>
     </div>

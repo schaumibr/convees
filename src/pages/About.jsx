@@ -146,7 +146,7 @@ Whether you’re part of an organisation or simply looking to find your people, 
         <div className="container">
           <div className="section-heading">
             <h2>Meet the Team</h2>
-            <p>The people behind conveess, dedicated to building stronger communities.</p>
+            <p>The people behind convees, dedicated to building stronger communities.</p>
           </div>
           <div className="grid grid-4">
             {team.map((member, i) => (
@@ -249,7 +249,7 @@ Whether you’re part of an organisation or simply looking to find your people, 
             Ready to join your community?
           </h2>
           <p className="text-muted" style={{ marginBottom: 'var(--space-4)', fontSize: 'var(--text-lg)' }}>
-            Explore what conveess can do for your neighborhood.
+            Explore what convees can do for your neighborhood.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-2)', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/features" className="btn btn-primary btn-lg">See Features</Link>
