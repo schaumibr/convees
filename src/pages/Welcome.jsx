@@ -59,7 +59,7 @@ function Welcome() {
       <footer className="footer-minimal">
         <Link to="/privacy">Privacy Policy</Link> &middot;
         <Link to="/contact">Contact</Link> &middot;
-        <Link to="/reset-password">Reset Password</Link>
+        
         <div style={{ marginTop: 'var(--space-2)' }}>
           &copy; {new Date().getFullYear()} convees. All rights reserved.
         </div>

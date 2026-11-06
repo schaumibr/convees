@@ -49,9 +49,7 @@ function Header() {
         </nav>
 
         <div className="header-actions">
-            {/* <Link to="/reset-password" className="btn btn-ghost" style={{ fontSize: 'var(--text-sm)' }}>
-              Sign In
-            </Link> */}
+        
           {/* <Link to="/about" className="btn btn-primary" style={{ fontSize: 'var(--text-sm)' }}>
             Get Started
           </Link> */}
@@ -88,7 +86,7 @@ function Header() {
             {link.label}
           </Link>
         ))}
-        <Link to="/reset-password">Sign In</Link>
+       
       </div>
     </header>
   )

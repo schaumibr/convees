@@ -17,7 +17,7 @@ function App() {
   return (
      
     
-    <BrowserRouter basename="/convees">
+    <BrowserRouter >
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/auth/callback" element={<AuthCallback />} />
